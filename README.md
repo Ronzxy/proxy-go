@@ -197,7 +197,7 @@ cd /root/proxy/
 wget https://raw.githubusercontent.com/snail007/goproxy/master/install.sh  
 chmod +x install.sh  
 ./install.sh  
-```  
+```   
 
 #### Docker installation 
 
