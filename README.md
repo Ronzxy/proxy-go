@@ -11,7 +11,7 @@ Proxy is a high performance HTTP, HTTPS, HTTPS, websocket, TCP, UDP, Socks5, ss 
 
 **[Full-platform graphical interface version](/gui/README.md)**  
 
-**[Full platform SDK](/sdk/README.md)**
+**[Full platform SDK](https://github.com/snail007/goproxy-sdk/blob/master/README.md)**
 
 **[GoProxy special authorization](/AUTHORIZATION.md)**
 
