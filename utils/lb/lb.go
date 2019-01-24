@@ -72,10 +72,15 @@ func NewGroup(selectType int, configs BackendsConfig, dr *dnsx.DomainResolver, l
 		bks:      bks,
 	}
 }
+
 func (g *Group) Select(srcAddr string, onlyHa bool) (addr string) {
-	addr=""
+	_, addr = g.Select2(srcAddr, onlyHa)
+	return
+}
+func (g *Group) Select2(srcAddr string, onlyHa bool) (isEmpty bool, addr string) {
+	addr = ""
 	if len(g.bks) == 1 {
-		return g.bks[0].Address
+		return false, g.bks[0].Address
 	}
 	if onlyHa {
 		g.lock.Lock()
@@ -85,16 +90,20 @@ func (g *Group) Select(srcAddr string, onlyHa bool) (addr string) {
 				g.log.Printf("############ choosed %s from lastest ############", g.last.Address)
 				printDebug(true, g.log, nil, srcAddr, (*g.selector).Backends())
 			}
-			return g.last.Address
+			return false, g.last.Address
 		}
 		g.last = (*g.selector).SelectBackend(srcAddr)
 		if !g.last.Active && g.last.ConnectUsedMillisecond > 0 {
 			g.log.Printf("###warn### lb selected empty , return default , for : %s", srcAddr)
 		}
-		return g.last.Address
+		return true, g.last.Address
 	}
 	b := (*g.selector).SelectBackend(srcAddr)
-	return b.Address
+	if !b.Active && b.ConnectUsedMillisecond > 0 {
+		g.log.Printf("###warn### lb selected empty , return default , for : %s", srcAddr)
+		return true, b.Address
+	}
+	return false, b.Address
 
 }
 func (g *Group) IncreasConns(addr string) {
