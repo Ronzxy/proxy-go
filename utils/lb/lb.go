@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/snail007/goproxy/utils/dnsx"
+	"github.com/skygangsta/proxy/utils/dnsx"
 )
 
 const (

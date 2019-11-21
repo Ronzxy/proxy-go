@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	proxyclient "github.com/snail007/goproxy/core/proxy/client"
-	sdk "github.com/snail007/goproxy/sdk/android-ios"
+	proxyclient "github.com/skygangsta/proxy/core/proxy/client"
+	sdk "github.com/skygangsta/proxy/sdk/android-ios"
 )
 
 func TestSocks5(t *testing.T) {

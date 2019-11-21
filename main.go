@@ -8,10 +8,10 @@ import (
 	"runtime/debug"
 	"syscall"
 
-	"github.com/snail007/goproxy/services"
+	"github.com/skygangsta/proxy/services"
 )
 
-var APP_VERSION = "No Version Provided"
+var APP_VERSION = "7.0"
 
 func main() {
 	err := initConfig()

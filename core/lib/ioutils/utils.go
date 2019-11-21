@@ -4,7 +4,7 @@ import (
 	"io"
 	logger "log"
 
-	lbuf "github.com/snail007/goproxy/core/lib/buf"
+	lbuf "github.com/skygangsta/proxy/core/lib/buf"
 )
 
 func IoBind(dst io.ReadWriteCloser, src io.ReadWriteCloser, fn func(err interface{}), log *logger.Logger) {

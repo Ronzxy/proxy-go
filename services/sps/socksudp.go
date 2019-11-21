@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/snail007/goproxy/utils"
-	goaes "github.com/snail007/goproxy/utils/aes"
-	"github.com/snail007/goproxy/utils/socks"
+	"github.com/skygangsta/proxy/utils"
+	goaes "github.com/skygangsta/proxy/utils/aes"
+	"github.com/skygangsta/proxy/utils/socks"
 )
 
 func (s *SPS) proxyUDP(inConn *net.Conn, serverConn *socks.ServerConn) {

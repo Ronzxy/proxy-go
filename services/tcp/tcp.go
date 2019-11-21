@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/snail007/goproxy/core/cs/server"
-	"github.com/snail007/goproxy/core/lib/kcpcfg"
-	"github.com/snail007/goproxy/services"
-	"github.com/snail007/goproxy/utils"
-	"github.com/snail007/goproxy/utils/jumper"
-	"github.com/snail007/goproxy/utils/mapx"
+	"github.com/skygangsta/proxy/core/cs/server"
+	"github.com/skygangsta/proxy/core/lib/kcpcfg"
+	"github.com/skygangsta/proxy/services"
+	"github.com/skygangsta/proxy/utils"
+	"github.com/skygangsta/proxy/utils/jumper"
+	"github.com/skygangsta/proxy/utils/mapx"
 
 	"strconv"
 )

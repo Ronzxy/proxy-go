@@ -9,7 +9,7 @@ import (
 	"crypto/sha256"
 	"errors"
 
-	lbuf "github.com/snail007/goproxy/core/lib/buf"
+	lbuf "github.com/skygangsta/proxy/core/lib/buf"
 	"github.com/Yawning/chacha20"
 	"golang.org/x/crypto/blowfish"
 	"golang.org/x/crypto/cast5"

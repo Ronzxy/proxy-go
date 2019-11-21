@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/snail007/goproxy/services"
-	"github.com/snail007/goproxy/utils"
-	"github.com/snail007/goproxy/utils/cert"
+	"github.com/skygangsta/proxy/services"
+	"github.com/skygangsta/proxy/utils"
+	"github.com/skygangsta/proxy/utils/cert"
 )
 
 type KeygenArgs struct {

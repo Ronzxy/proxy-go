@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/snail007/goproxy/services"
-	"github.com/snail007/goproxy/utils"
-	"github.com/snail007/goproxy/utils/jumper"
-	"github.com/snail007/goproxy/utils/mapx"
+	"github.com/skygangsta/proxy/services"
+	"github.com/skygangsta/proxy/utils"
+	"github.com/skygangsta/proxy/utils/jumper"
+	"github.com/skygangsta/proxy/utils/mapx"
 
 	//"github.com/xtaci/smux"
 	smux "github.com/hashicorp/yamux"
